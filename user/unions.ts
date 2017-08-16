@@ -1,11 +1,9 @@
 import * as R from 'ramda';
-import User from './user';
-
+import { User } from './user';
 
 const updateBillingZipCode: ActionCreator = (zipCode: ZipCode): UserAction => ({
   type: 'UPDATE_USER_BILLING_ZIP_CODE', zipCode
 })
-
 
 const userReducer = (state = null, action: UserAction): null | User => {
   switch (action.type) {

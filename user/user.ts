@@ -1,4 +1,4 @@
-export default class User {
+export class User {
   name: Name
   email: Email
   address?: Address
@@ -11,7 +11,7 @@ export default class User {
   }
 }
 
-const tim = new User(
+export const tim = new User(
   { first: 'tim', last: 'pike', middleInitial: 'd' },
   { primary : 'tim22@gmail.com' },
   { street: '1222 Haight Street', streetAdditional: 'Apt 22', city: 'San Francisco', state: 'CA', zip: 94117 },
@@ -50,16 +50,16 @@ const alberto = new User(
   { street: '440 Page Street', streetAdditional: 'Apt 1A', city: 'San Francisco', state: 'CA', zip: 94114 },
 );
 
-const users = [tim, susan, lili, peter, anna, alberto];
+export const userList = [tim, susan, lili, peter, anna, alberto];
 
-const userZipCodes: number[] = users.reduce((acc: number[], user: User) => {
+const userZipCodes: number[] = userList.reduce((acc: number[], user: User) => {
   return (user && user.address) ? acc.concat(user.address.zip) : acc;
 }, []);
 
-const secondaryPhoneNumbers: string[] = users.reduce((acc: string[], user: User) => {
+const secondaryPhoneNumbers: string[] = userList.reduce((acc: string[], user: User) => {
   return (user.phone && user.phone.secondary) ? acc.concat(user.phone.secondary) : acc;
 }, []);
 
-const usersAroundLowerHaight = users.filter(users => users.address && users.address.zip === 94114)
+const usersAroundLowerHaight = userList.filter(user => user.address && user.address.zip === 94114)
 
 
