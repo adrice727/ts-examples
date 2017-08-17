@@ -6,14 +6,12 @@ class Animal {
 }
 
 class Cat extends Animal {
-  name: string
   constructor(name: string) {
     super(name);
   }
 }
 
 class Lion extends Cat {
-  name: string
   constructor(name: string) {
     super(name)
   }
@@ -25,7 +23,7 @@ const lisa = new Lion('lisa');
 
 
 const show = (a: Cat): void => {
-  console.log(a);
+  console.log(a.name);
 }
 
 // Invariant: Cat
