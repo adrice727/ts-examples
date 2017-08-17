@@ -16,3 +16,9 @@ const adminTim = new Admin(
   { street: '1222 Haight Street', streetAdditional: 'Apt 22', city: 'San Francisco', state: 'CA', zip: 94117 },
   { primary: '5553838393' },
 );
+
+const updateAcessLevel = (admin: Admin, level: AccessLevel): Admin => {
+    return Object.assign({}, admin, { access: level });
+}
+
+updateAcessLevel(adminTim, AccessLevel.standard)
