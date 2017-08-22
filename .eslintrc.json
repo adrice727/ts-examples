@@ -1,0 +1,28 @@
+{
+  "extends": [
+    "airbnb",
+    "plugin:flowtype/recommended"
+  ],
+  "env": {
+    "browser": true,
+    "node": true
+  },
+  "parser": "babel-eslint",
+  "parserOptions": {
+    "sourceType": "module",
+    "ecmaVersion": 6
+  },
+  "plugins": [
+    "flowtype"
+  ],
+  "rules": {
+    "strict": 0,
+    "padded-blocks": 0,
+    "no-unused-expressions": [2, { "allowTernary": true, "allowShortCircuit": true }],
+    "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }],
+    "max-len": ["error", 150],
+    "no-confusing-arrow": 0,
+    "react/sort-comp": 0,
+    "react/require-default-props": 0
+  }
+}
