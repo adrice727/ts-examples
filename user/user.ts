@@ -54,7 +54,7 @@ const alberto = new User(
 
 const users = [tim, susan, lili, peter, anna, alberto];
 
-const userZipCodes: number[] = users.reduce((acc: number[], user: User) => {
+const userZipCodes: ZipCode[] = users.reduce((acc: number[], user: User) => {
   return (user && user.address) ? acc.concat(user.address.zip) : acc;
 }, []);
 
@@ -63,5 +63,3 @@ const secondaryPhoneNumbers: string[] = users.reduce((acc: string[], user: User)
 }, []);
 
 const usersAroundLowerHaight = users.filter(users => users.address && users.address.zip === 94114)
-
-
