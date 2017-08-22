@@ -1,4 +1,6 @@
-export default class User {
+import * as R from 'ramda';
+
+export class User {
   name: Name
   email: Email
   address?: Address
