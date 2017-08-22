@@ -59,7 +59,7 @@ const userZipCodes: number[] = users.reduce((acc: number[], user: User) => {
 }, []);
 
 const secondaryPhoneNumbers: string[] = users.reduce((acc: string[], user: User) => {
-  return (user.phone && user.phone.secondary) ? acc.concat(user.phone.secondary) : acc;
+  // ???
 }, []);
 
 const usersAroundLowerHaight = users.filter(users => users.address && users.address.zip === 94114)
