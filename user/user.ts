@@ -1,3 +1,5 @@
+import * as R from 'ramda';
+
 export class User {
   name: Name
   email: Email
@@ -61,5 +63,4 @@ const secondaryPhoneNumbers: string[] = users.reduce((acc: string[], user: User)
 }, []);
 
 const usersAroundLowerHaight = users.filter(users => users.address && users.address.zip === 94114)
-
 
