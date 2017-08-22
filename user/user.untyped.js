@@ -57,7 +57,7 @@ class Email {
 
 class Address {
   constructor(street, streetAdditional, city, state, zip) {
-    if (!streetPrimary || !city || !state || !zip) {
+    if (!street || !city || !state || !zip) {
       throw new TypeError('Street, city, state, and zip cannot be undefined');
     }
     this.street = street;
