@@ -25,6 +25,3 @@ class User {
     this.phone = phone;
   }
 }
-
-const tim = new User()
-
