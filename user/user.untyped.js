@@ -1,7 +1,7 @@
 class User {
   /**
    * Create a user
-   * @param {object} name
+   * @param {Object} name
    * @param {string} name.first
    * @param {string} name.last
    * @param {string} [name.middleInitial]
