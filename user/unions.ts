@@ -2,7 +2,7 @@ import * as R from 'ramda';
 import { User } from './user';
 
 
-const updateBillingZipCode: ActionCreator = (zipCode: ZipCode): UserAction => ({
+const updateUserZipCode: ActionCreator = (zipCode: ZipCode): UserAction => ({
   type: 'UPDATE_USER_ZIP_CODE', zipCode
 });
 

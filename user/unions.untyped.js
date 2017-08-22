@@ -1,7 +1,7 @@
 import R from 'ramda';
 
-const updateBillingZipCode = (zipCode) => ({
-  type: 'UPDATE_USER_ZIP_CODE', zipCode
+const updateUserZipCode = (zipCode) => ({
+  type: 'UPDATE_ZIP_CODE', zipCode
 })
 
 const userReducer = (state = null, action) => {
@@ -10,7 +10,7 @@ const userReducer = (state = null, action) => {
       return action.user;
     case 'LOGOUT_USER':
       return null;
-    case 'UPDATE_ZIP_CODE':
+    case 'UPDATE_USER_ZIP_CODE':
       return R.assocPath(['address', 'zipCode'], action.zipCode, state);
     default:
       return state;
