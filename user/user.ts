@@ -1,4 +1,4 @@
-export default class User {
+export class User {
   name: Name
   email: Email
   address?: Address
