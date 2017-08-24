@@ -73,6 +73,9 @@ class User {
    * @param {Phone} [phone]
    */
   constructor(name, email, address, phone) {
+    if (!name || !email) {
+      throw new TypeError('A user requires a name and an email');
+    }
     this.name = name;
     this.email = email;
     this.address = address;
