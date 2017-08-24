@@ -16,6 +16,10 @@ class Name {
 }
 
 class Email {
+  /**
+   * @param {string} primary
+   * @param {string} [secondary]
+   */
   constructor(primary, secondary) {
     if (!primary) {
       throw new TypeError('Primary email cannot be undefined');
@@ -26,6 +30,14 @@ class Email {
 }
 
 class Address {
+  /**
+   *
+   * @param {string} street
+   * @param {string} [streetAdditional]
+   * @param {string} city
+   * @param {string} state
+   * @param {number} zip
+   */
   constructor(street, streetAdditional, city, state, zip) {
     if (!streetPrimary || !city || !state || !zip) {
       throw new TypeError('Street, city, state, and zip cannot be undefined');
@@ -39,6 +51,10 @@ class Address {
 }
 
 class Phone {
+  /**
+   * @param {string} primary
+   * @param {string} [secondary]
+   */
   constructor(primary, secondary) {
     if (!primary) {
       throw new TypeError('Primary phone number cannot be undefined');
@@ -69,4 +85,4 @@ const tim = new User(
   new Email('tim22@gmail.com'),
   new Address('1222 Haight Street', 'Apt 22', 'San Francisco', 'CA', 94117),
   new Phone('5553838393'),
-)
+);
