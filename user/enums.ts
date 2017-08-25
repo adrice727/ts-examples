@@ -1,8 +1,7 @@
 import { User } from './user';
 
 class Admin extends User {
-  access: string
-  constructor(name: Name, email: Email, access: string, address: Address, phone: Phone) {
+  constructor(name: Name, email: Email, public access: string, address: Address, phone: Phone) {
     super(name, email, address, phone);
     this.access = access;
   }
