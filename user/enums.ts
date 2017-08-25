@@ -2,7 +2,6 @@ import { User } from './user';
 
 
 class Admin extends User {
-
   constructor(name: Name, email: Email, public access: AccessLevel, address: Address, phone: Phone) {
     super(name, email, address, phone);
   }
