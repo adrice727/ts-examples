@@ -8,5 +8,3 @@ declare enum AccessLevel {
   standard,
   complete
 }
-declare type SubscriptionType = 'standard' | 'premium';
-declare type Subscription = SubscriptionType | null
