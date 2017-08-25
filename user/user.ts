@@ -1,16 +1,7 @@
 import * as R from 'ramda';
 
 export class User {
-  name: Name
-  email: Email
-  address?: Address
-  phone?: Phone
-  constructor(name: Name, email: Email, address?: Address, phone?: Phone) {
-    this.name = name;
-    this.email = email;
-    this.address = address;
-    this.phone = phone;
-  }
+  constructor(public name: Name, public email: Email, public address?: Address, public phone?: Phone) {}
 }
 
 const tim = new User(
@@ -63,4 +54,3 @@ const secondaryPhoneNumbers: string[] = users.reduce((acc: string[], user: User)
 }, []);
 
 const usersAroundLowerHaight = users.filter(users => users.address && users.address.zip === 94114)
-
