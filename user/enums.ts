@@ -2,10 +2,9 @@ import { User } from './user';
 
 
 class Admin extends User {
-  access: AccessLevel
-  constructor(name: Name, email: Email, access: AccessLevel, address: Address, phone: Phone) {
+
+  constructor(name: Name, email: Email, public access: AccessLevel, address: Address, phone: Phone) {
     super(name, email, address, phone);
-    this.access = access;
   }
 }
 
