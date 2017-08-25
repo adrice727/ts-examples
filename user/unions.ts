@@ -1,6 +1,11 @@
 import * as R from 'ramda';
 import { User } from './user';
 
+type UserAction =
+  { type: 'LOGIN_USER', user: User } |
+  { type: 'LOGOUT_USER', user: User } |
+  { type: 'UPDATE_USER_ZIP_CODE', zipCode: ZipCode };
+
 
 const updateUserZipCode: ActionCreator = (zipCode: ZipCode): UserAction => ({
   type: 'UPDATE_USER_ZIP_CODE', zipCode
@@ -19,9 +24,4 @@ const userReducer = (state = null, action: UserAction): null | User => {
       return state;
   }
 }
-
-type UserAction =
-{ type: 'LOGIN_USER', user: User } |
-{ type: 'LOGOUT_USER', user: User } |
-{ type: 'UPDATE_USER_ZIP_CODE', zipCode: ZipCode};
 
